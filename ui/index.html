@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
     <meta charset="UTF-8">
     <title>官方首页</title>
@@ -14,14 +14,51 @@
 </head>
 <body>
 <div class="mdui-container">
-   <textarea class="mdui-center">
-请输入你要处理的JSON
-</textarea>
+    <div class="mdui-card">
+        <div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
+    </div>
+    <textarea class="mdui-center">
+        请输入你要处理的JSON
+    </textarea>
+</div>
+<div class="mdui-fab-wrapper" id="fab">
+    <button class="mdui-fab mdui-ripple mdui-color-theme-accent mdui-color-pink-accent">
+        <i class="mdui-icon material-icons">add</i>
+    </button>
+    <div class="mdui-fab-dial">
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink"><i
+                    class="mdui-icon material-icons">backup</i></button>
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red"><i
+                    class="mdui-icon material-icons">bookmark</i></button>
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange"><i class="mdui-icon material-icons">access_alarms</i>
+        </button>
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue"><i
+                    class="mdui-icon material-icons">touch_app</i></button>
+    </div>
 </div>
 </body>
 <script>
     mdui.snackbar({
-        message: '请输入你要处理的JSON'
+        message: '欢迎访问!',
+        position: 'top'
+    });
+    const inst = new mdui.Fab('#fab');
+    // event
+    const fab = document.getElementById('fab');
+    fab.addEventListener('open.mdui.fab', function () {
+        console.log('open');
+    });
+
+    fab.addEventListener('opened.mdui.fab', function () {
+        console.log('opened');
+    });
+
+    fab.addEventListener('close.mdui.fab', function () {
+        console.log('close');
+    });
+
+    fab.addEventListener('closed.mdui.fab', function () {
+        console.log('closed');
     });
 </script>
 </html>
