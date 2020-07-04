@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>官方首页</title>
+    <link rel="stylesheet" href="./mdui/css/mdui.min.css">
+    <script src="./mdui/js/mdui.min.js"></script>
+    <style>
+        textarea {
+            width: 80%;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
-<h1>首页</h1>
+<div class="mdui-container">
+   <textarea class="mdui-center">
+请输入你要处理的JSON
+</textarea>
+</div>
 </body>
+<script>
+    mdui.snackbar({
+        message: '请输入你要处理的JSON'
+    });
+</script>
 </html>
